@@ -1,0 +1,221 @@
+{"definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "took",
+    "timed_out",
+    "_shards",
+    "hits"
+  ],
+  "properties": {
+    "took": {
+      "$id": "#/properties/took",
+      "type": "integer",
+      "title": "The Took Schema",
+      "default": 0,
+      "examples": [
+        3
+      ]
+    },
+    "timed_out": {
+      "$id": "#/properties/timed_out",
+      "type": "boolean",
+      "title": "The Timed_out Schema",
+      "default": false,
+      "examples": [
+        false
+      ]
+    },
+    "_shards": {
+      "$id": "#/properties/_shards",
+      "type": "object",
+      "title": "The _shards Schema",
+      "required": [
+        "total",
+        "successful",
+        "skipped",
+        "failed"
+      ],
+      "properties": {
+        "total": {
+          "$id": "#/properties/_shards/properties/total",
+          "type": "integer",
+          "title": "The Total Schema",
+          "default": 0,
+          "examples": [
+            1
+          ]
+        },
+        "successful": {
+          "$id": "#/properties/_shards/properties/successful",
+          "type": "integer",
+          "title": "The Successful Schema",
+          "default": 0,
+          "examples": [
+            1
+          ]
+        },
+        "skipped": {
+          "$id": "#/properties/_shards/properties/skipped",
+          "type": "integer",
+          "title": "The Skipped Schema",
+          "default": 0,
+          "examples": [
+            0
+          ]
+        },
+        "failed": {
+          "$id": "#/properties/_shards/properties/failed",
+          "type": "integer",
+          "title": "The Failed Schema",
+          "default": 0,
+          "examples": [
+            0
+          ]
+        }
+      }
+    },
+    "hits": {
+      "$id": "#/properties/hits",
+      "type": "object",
+      "title": "The Hits Schema",
+      "required": [
+        "total",
+        "hits"
+      ],
+      "properties": {
+        "total": {
+          "$id": "#/properties/hits/properties/total",
+          "type": "object",
+          "title": "The Total Schema",
+          "required": [
+            "value",
+            "relation"
+          ],
+          "properties": {
+            "value": {
+              "$id": "#/properties/hits/properties/total/properties/value",
+              "type": "integer",
+              "title": "The Value Schema",
+              "default": 0,
+              "examples": [
+                1
+              ]
+            },
+            "relation": {
+              "$id": "#/properties/hits/properties/total/properties/relation",
+              "type": "string",
+              "title": "The Relation Schema",
+              "default": "",
+              "examples": [
+                "eq"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        },
+        "hits": {
+          "$id": "#/properties/hits/properties/hits",
+          "type": "array",
+          "title": "The Hits Schema",
+          "items": {
+            "$id": "#/properties/hits/properties/hits/items",
+            "type": "object",
+            "title": "The Items Schema",
+            "required": [
+              "_index",
+              "_type",
+              "_id",
+              "_score",
+              "_source"
+            ],
+            "properties": {
+              "_index": {
+                "$id": "#/properties/hits/properties/hits/items/properties/_index",
+                "type": "string",
+                "title": "The _index Schema",
+                "default": "",
+                "examples": [
+                  "book"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "_type": {
+                "$id": "#/properties/hits/properties/hits/items/properties/_type",
+                "type": "string",
+                "title": "The _type Schema",
+                "default": "",
+                "examples": [
+                  "_doc"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "_id": {
+                "$id": "#/properties/hits/properties/hits/items/properties/_id",
+                "type": "string",
+                "title": "The _id Schema",
+                "default": "",
+                "examples": [
+                  "1"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "_score": {
+                "$id": "#/properties/hits/properties/hits/items/properties/_score",
+                "type": "number",
+                "title": "The _score Schema",
+                "default": 0.0,
+                "examples": [
+                  0.2876821
+                ]
+              },
+              "_source": {
+                "$id": "#/properties/hits/properties/hits/items/properties/_source",
+                "type": "object",
+                "title": "The _source Schema",
+                "required": [
+                  "is_read",
+                  "author",
+                  "name"
+                ],
+                "properties": {
+                  "is_read": {
+                    "$id": "#/properties/hits/properties/hits/items/properties/_source/properties/is_read",
+                    "type": "boolean",
+                    "title": "The Is_read Schema",
+                    "default": false,
+                    "examples": [
+                      false
+                    ]
+                  },
+                  "author": {
+                    "$id": "#/properties/hits/properties/hits/items/properties/_source/properties/author",
+                    "type": "string",
+                    "title": "The Author Schema",
+                    "default": "",
+                    "examples": [
+                      "oSu0uTbUb9"
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "name": {
+                    "$id": "#/properties/hits/properties/hits/items/properties/_source/properties/name",
+                    "type": "string",
+                    "title": "The Name Schema",
+                    "default": "",
+                    "examples": [
+                      "fgMdbyPX0F"
+                    ],
+                    "pattern": "^(.*)$"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
